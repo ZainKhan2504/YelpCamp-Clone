@@ -1,0 +1,24 @@
+{
+  "name": "yelp",
+  "version": "1.0.0",
+  "description": "YelpCamp Application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZainKhan2504/YelpCamp-Clone.git"
+  },
+  "author": "Zain Ali Khan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZainKhan2504/YelpCamp-Clone/issues"
+  },
+  "homepage": "https://github.com/ZainKhan2504/YelpCamp-Clone#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3"
+  }
+}
