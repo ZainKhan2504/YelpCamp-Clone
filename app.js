@@ -1,10 +1,11 @@
 // Require Packages
 var express       = require("express");
-var app           = express();
-var bodyParser    = require("body-parser");
-var mongoose      = require("mongoose");
-var passport      = require("passport");
-var localStrategy = require("passport-local");
+var app            = express();
+var bodyParser     = require("body-parser");
+var mongoose       = require("mongoose");
+var passport       = require("passport");
+var localStrategy  = require("passport-local");
+var methodOverride = require("method-override");
 
 // Get User Schema
 var User     = require("./models/user");
@@ -25,6 +26,7 @@ mongoose.connect("mongodb://localhost/yelp_camp");
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname +"/public"));
+app.use(methodOverride("_method"));
 
 // seedDB(); // seed the DB
 
