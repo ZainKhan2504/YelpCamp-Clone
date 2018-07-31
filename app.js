@@ -7,6 +7,7 @@ var flash          = require("connect-flash");
 var passport       = require("passport");
 var localStrategy  = require("passport-local");
 var methodOverride = require("method-override");
+require('dotenv').config();
 
 // Get User Schema
 var User     = require("./models/user");
