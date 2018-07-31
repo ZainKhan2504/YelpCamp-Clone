@@ -30,6 +30,9 @@ app.use(express.static(__dirname +"/public"));
 app.use(methodOverride("_method"));
 app.use(flash());
 
+// Add moment JS for time of comment
+app.locals.moment = require("moment");
+
 // seedDB(); // seed the DB
 
 // Passport Configuration

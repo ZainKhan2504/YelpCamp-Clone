@@ -21,8 +21,11 @@ router.get("/register", function(req, res){
 
 // Handle Registration Form
 router.post("/register", function(req, res){
-    var newUser = new User({username: req.body.username}); 
-   User.register(newUser, req.body.password, function(err, user){
+    var newUser = new User({username: req.body.username});
+    if (req.body.adminCode === "Admin") {
+        newUser.isAdmin = true;
+    }
+    User.register(newUser, req.body.password, function(err, user){
       if (err) {
           req.flash("error", err.message);
           return res.render("register");
@@ -32,7 +35,7 @@ router.post("/register", function(req, res){
               res.redirect("/campgrounds"); 
           });
       } 
-   });
+    });
 });
 
 // Login route
